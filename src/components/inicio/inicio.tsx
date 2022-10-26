@@ -31,6 +31,7 @@ function Index() {
       </div>
       <div>
         {/* <figure>Circulo</figure> */}
+        {/* <img src="{Logo}" alt="Mi foto perfil" /> */}
         <img src={Logo} alt="Mi foto perfil" />
       </div>
     </>

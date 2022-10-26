@@ -1,5 +1,14 @@
 import React from "react";
 import ux1 from './img/ux-1.png';
+import web from './img/web-programming-1.png';
+import wscrapping from "./img/web-scraping-1.png";
+import mobile from './img/app-development.png';
+import ux from './img/ux-services.png';
+import desarrolloweb from './img/web.png';
+import mobile2 from './img/mobile.png';
+import git from './img/git.png';
+import node from './img/node.png';
+import webscrapping from './img//web-scrapping.png';
 
 function Quien_soy() {
   return (
@@ -19,25 +28,26 @@ function Quien_soy() {
         <div className="quien-soy__cards">
             {/* <!-- CARD 1 --> */}
             <div className="cards">
+                
                 <img src={ux1} title="ux" alt="Logo servicio" />
                 <h3>UI & UX DESINGINING</h3>
             </div>
             {/* <!-- FIN CARD 1 --> */}
             {/* <!-- CARD 2 --> */}
             <div className="cards">
-                <img src="public/img/web-programming-1.png" alt="Logo servicio" />
+                <img src={web} alt="Logo servicio" />
                 <h3>WEB DEVELOPMENT</h3>
             </div>
             {/* <!-- FIN CARD 2 --> */}
             {/* <!-- CARD 3 --> */}
             <div className="cards">
-                <img src="public/img/app-development.png" alt="Logo servicio" />
+                <img src={mobile} alt="Logo servicio" />
                 <h3>MOBILE DEVELOPMENT</h3>
             </div>
             {/* <!-- FIN CARD 3 --> */}
             {/* <!-- CARD 4 --> */}
             <div className="cards">
-                <img src="public/img/web-scraping-1.png" alt="Logo servicio" />
+                <img src={wscrapping} alt="Logo servicio" />
                 <h3>WEB SCRAPING WITH PHYTON</h3>
             </div>
             {/* <!-- FIN CARD 4 --> */}
@@ -48,14 +58,14 @@ function Quien_soy() {
         <div className="quien-soy__cards__services">
             {/* <!-- CARD 1 --> */}
             <div className="cards">
-                <img src="public/img/ux-services.png" alt="Logo servicio" />
+                <img src={ux} alt="Logo servicio" />
                 <h2>DISEÑO DE UI Y UX</h2>
                 <p>Diseño hermosas interfaces web con Figma y Adobe XD</p>
             </div>
             {/* <!-- FIN CARD 1 --> */}
             {/* <!-- CARD 2 --> */}
             <div className="cards">
-                <img src="public/img/web.png" alt="Logo servicio" />
+                <img src={desarrolloweb} alt="Logo servicio" />
                 <h2>DESARROLLO WEB</h2>
                 <p>
                     Creo hermosas interfaces con HTML, CSS y JavaScript simples y también marcos como Angular.
@@ -64,7 +74,7 @@ function Quien_soy() {
             {/* <!-- FIN CARD 2 --> */}
             {/* <!-- CARD 3 --> */}
             <div className="cards">
-                <img src="public/img/mobile.png" alt="Logo servicio" />
+                <img src={mobile2} alt="Logo servicio" />
                 <h2>DESARROLLO MÓVIL</h2>
                 <p>
                     Soy un desarrollador móvil experto. Tengo experiencia usando Flutter y React Native.
@@ -73,7 +83,7 @@ function Quien_soy() {
             {/* <!-- FIN CARD 3 --> */}
             {/* <!-- CARD 4 --> */}
             <div className="cards">
-                <img src="public/img/git.png" alt="Logo servicio" />
+                <img src={git} alt="Logo servicio" />
                 <h2>CONTROL DE VERSIONES</h2>
                 <p>
                     Puedo usar bien los sistemas de control de versiones, y Git y Mercurial son mi herramienta preferida.
@@ -82,7 +92,7 @@ function Quien_soy() {
             {/* <!-- FIN CARD 4 --> */}
             {/* <!-- CARD 5 --> */}
             <div className="cards">
-                <img src="public/img/node.png" alt="Logo servicio" />
+                <img src={node} alt="Logo servicio" />
                 <h2>NPM Y NODEJS</h2>
                 <p>
                     Tengo una comprensión básica de NPM. También puedo desarrollar aplicaciones de propósito general con NodeJS
@@ -91,7 +101,7 @@ function Quien_soy() {
             {/* <!-- FIN CARD 5 --> */}
             {/* <!-- CARD 6 --> */}
             <div className="cards">
-                <img src="public/img/web-scrapping.png" alt="Logo servicio" />
+                <img src={webscrapping} alt="Logo servicio" />
                 <h2>WEB SCRAPING</h2>
                 <p>
                     Puedo recopilar contenido y datos de Internet y luego manipularlos y analizarlos según sea necesario.

@@ -17,6 +17,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.opacity-40 {
+    opacity: 40%;
+}
+
 .desktop {
     display: block;
 }
@@ -645,6 +649,7 @@ nav .nav__menu ul li a img {
 
 #proyectos .mas__proyectos a {
     padding: 0.625rem;
+    margin-top: 1.5rem;
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: var(--white);
@@ -947,6 +952,15 @@ footer .rrss__footer {
     padding-top: 0.9375rem;
 }
 
+footer .rrss__footer a {
+    margin-right: 0.5rem;
+}
+
+footer .rrss__footer a:hover {
+    color: var(--secondary-color);
+    transform: rotateY(180deg);
+}
+
 footer .enlaces__footer {
     display: flex;
     /* align-items: center; */
@@ -980,14 +994,8 @@ footer .enlaces__footer p>a:hover {
 }
 
 footer .icon__footer {
-    width: 1.875rem;
-    height: 1.875rem;
+    font-size: 1.875rem;
     color: var(--primary-color);
-}
-
-footer .icon__footer:hover {
-    color: var(--secondary-color);
-    transform: rotateY(180deg);
 }
 
 @media (min-width: 1920px) {
