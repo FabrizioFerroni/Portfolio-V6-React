@@ -1,15 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import Inicio from "./components/inicio/inicio";
+import Quien_soy from "./components/quien-soy/quien_soy";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div className="container">
+      <section id="inicio" className="page-section">
+        <Inicio />
+      </section>
+      <section id="quien-soy" className="page-section">
+        <Quien_soy />
+      </section>
+    </div>
   </React.StrictMode>
 );
 

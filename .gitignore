@@ -7,6 +7,10 @@
 
 #Propios
 public/img
+public/cv
+src/components/inicio/img
+src/components/quien-soy/img
+src/components/proyectos/img
 
 # testing
 /coverage
