@@ -34,6 +34,10 @@ html {
     box-shadow: 0 0 0 0 transparent !important;
 }
 
+.swiper {
+    padding-bottom: 1rem !important;
+}
+
 .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -68,7 +72,8 @@ html {
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: 0 !important;
+    /* bottom: 0rem !important; */
+    bottom: -0.625rem !important;
 }
 
 
@@ -85,7 +90,7 @@ html {
     bottom: 0.625rem;
     right: 0.625rem;
     z-index: 1000;
-    padding: 0.5rem;
+    padding: 0.1rem 0.5rem;
 }
 
 .ir-arriba:hover,
@@ -706,27 +711,19 @@ nav .nav__menu ul li a img {
     line-height: 1.6875rem;
 }
 
-#contactame img {
-    padding-top: 0.375rem;
-    /* width: 32px;
-    height: 32px; */
-    filter: invert(10);
-}
-
 #contactame a .icon__rrss {
     padding-top: 0.375rem;
     color: var(--primary-color);
-    width: 2rem;
-    height: 2rem;
+    font-size: 1.875rem;
 }
 
 #contactame a .icon__rrss:hover {
     color: var(--secondary-color);
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
 #contactame a {
-    padding-right: 1rem;
+    margin-right: 1rem;
 }
 
 #contactame a:last-child {
@@ -958,7 +955,6 @@ footer .rrss__footer a {
 
 footer .rrss__footer a:hover {
     color: var(--secondary-color);
-    transform: rotateY(180deg);
 }
 
 footer .enlaces__footer {

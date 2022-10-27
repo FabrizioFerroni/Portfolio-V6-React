@@ -1,7 +1,9 @@
 import React from "react";
-
+import usa from './img/usa.png';
+import {activeMenu} from '../js/activeMenu';
 
 function Nav() {
+    activeMenu();
     return (
         <nav>
         <div className="nav__title">
@@ -36,7 +38,7 @@ function Nav() {
                     </a>
                 </li>
                 <li>
-                    {/* <a href="javascript:void(0);" id="cambiar__idioma"><img id="flag__lang" data-flag="usa" title="Cambiar a inglés" src="public/img/flags/usa.png" alt="Cambiar a ingles" /></a> */}
+                    <a href="#" id="cambiar__idioma"><img id="flag__lang" data-flag="usa" title="Cambiar a inglés" src={usa} alt="Cambiar a ingles" /></a>
                 </li>
             </ul>
         </div>

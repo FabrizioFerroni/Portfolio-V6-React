@@ -1,75 +1,70 @@
-// const inputs = document.querySelectorAll('.fake_placeholder input');
-// const textarea = document.querySelectorAll('.fake_placeholder textarea');
-// const select = document.querySelectorAll('.fake_placeholder select');
+const inputs = document.querySelectorAll(".fake_placeholder input");
+const textarea = document.querySelectorAll(".fake_placeholder textarea");
+const select = document.querySelectorAll(".fake_placeholder select");
 
-// inputs.forEach(input => {
-//     //cuando entramos en el input 
-//     input.onfocus = () => {
-//         //al elemento anterior (el span) le agregamos la clase que la reubica en top
-//         input.previousElementSibling.classList.add('reubicar');
-//         input.classList.remove('input__pl');
+inputs.forEach((input) => {
+    //cuando entramos en el input
+    input.onfocus = () => {
+        //al elemento anterior (el span) le agregamos la clase que la reubica en top
+        input.previousElementSibling.classList.add("reubicar");
+        input.classList.remove("input__pl");
+    };
+    //cuando salimos del input
+    input.onblur = () => {
+        //si no hay texto, le quitamos la clase reubicar,
+        //para que se superponga con el input
+        if (input.value.trim().length == 0) {
+            input.previousElementSibling.classList.remove("reubicar");
+            input.classList.add("input__pl");
+        } else {
+            input.previousElementSibling.classList.add("reubicar");
+        }
+    };
+});
 
-//     }
+textarea.forEach((textarea) => {
+    //cuando entramos en el input
+    textarea.onfocus = () => {
+        //al elemento anterior (el span) le agregamos la clase que la reubica en top
+        textarea.previousElementSibling.classList.add("reubicar");
+        textarea.previousElementSibling.classList.remove("textarea");
+        textarea.classList.remove("textarea__pl");
+    };
 
-//     //cuando salimos del input
-//     input.onblur = () => {
-//         //si no hay texto, le quitamos la clase reubicar, 
-//         //para que se superponga con el input
-//         if (input.value.trim().length == 0) {
-//             input.previousElementSibling.classList.remove('reubicar');
-//             input.classList.add('input__pl');
-//         } else {
-//             input.previousElementSibling.classList.add('reubicar');
-//         }
-//     }
-// });
+    //cuando salimos del textarea
+    textarea.onblur = () => {
+        //si no hay texto, le quitamos la clase reubicar,
+        //para que se superponga con el textarea
+        if (textarea.value.trim().length == 0) {
+            textarea.previousElementSibling.classList.remove("reubicar");
+            textarea.previousElementSibling.classList.add("textarea");
+            textarea.classList.add("textarea__pl");
+        } else {
+            textarea.previousElementSibling.classList.add("reubicar");
+        }
+    };
+});
 
+select.forEach((select) => {
+    //cuando entramos en el input
+    select.onfocus = () => {
+        //al elemento anterior (el span) le agregamos la clase que la reubica en top
+        select.previousElementSibling.classList.add("reubicar");
+        select.classList.remove("select-pd");
+    };
 
-// textarea.forEach(textarea => {
-//     //cuando entramos en el input 
-//     textarea.onfocus = () => {
-//         //al elemento anterior (el span) le agregamos la clase que la reubica en top
-//         textarea.previousElementSibling.classList.add('reubicar');
-//         textarea.previousElementSibling.classList.remove('textarea');
-//         textarea.classList.remove('textarea__pl');
-//     }
-
-//     //cuando salimos del textarea
-//     textarea.onblur = () => {
-//         //si no hay texto, le quitamos la clase reubicar, 
-//         //para que se superponga con el textarea
-//         if (textarea.value.trim().length == 0) {
-//             textarea.previousElementSibling.classList.remove('reubicar');
-//             textarea.previousElementSibling.classList.add('textarea');
-//             textarea.classList.add('textarea__pl');
-//         } else {
-//             textarea.previousElementSibling.classList.add('reubicar');
-//         }
-
-//     }
-// });
-
-// select.forEach(select => {
-//     //cuando entramos en el input 
-//     select.onfocus = () => {
-//         //al elemento anterior (el span) le agregamos la clase que la reubica en top
-//         select.previousElementSibling.classList.add('reubicar');
-//         select.classList.remove('select-pd');
-//     }
-
-//     //cuando salimos del select
-//     select.onblur = () => {
-//         //si no hay texto, le quitamos la clase reubicar, 
-//         //para que se superponga con el select
-//         if (select.value.trim().length == 0) {
-//             select.previousElementSibling.classList.remove('reubicar');
-//             select.classList.add('select-pd');
-//         } else {
-//             select.previousElementSibling.classList.add('reubicar');
-//         }
-
-//     }
-// });
+    //cuando salimos del select
+    select.onblur = () => {
+        //si no hay texto, le quitamos la clase reubicar,
+        //para que se superponga con el select
+        if (select.value.trim().length == 0) {
+            select.previousElementSibling.classList.remove("reubicar");
+            select.classList.add("select-pd");
+        } else {
+            select.previousElementSibling.classList.add("reubicar");
+        }
+    };
+});
 
 // const form = document.getElementById("form");
 
@@ -80,7 +75,6 @@
 //     const telefono = document.getElementById("frm__telefono").value;
 //     const asunto = document.getElementById("frm__asunto").value;
 //     const mensaje = document.getElementById("frm__mensaje").value;
-
 
 //     if (nombre != "" && email != "" && telefono != "" && asunto != "" && mensaje != "") {
 //         const obj = {
@@ -199,7 +193,7 @@
 //         });
 // }
 
-// /* Code for changing active 
+// /* Code for changing active
 // link on Scrolling */
 // $(window).scroll(function() {
 //     const distance = $(window).scrollTop();
@@ -217,76 +211,79 @@
 //     });
 // }).scroll();
 
-// // Movil 
-// const open__menu = document.getElementById("open__menu");
-// const close__menu = document.getElementById("close__menu");
-// const menu__movil = document.getElementById("menu__movil");
+// // Movil
+const open__menu = document.getElementById("open__menu");
+const close__menu = document.getElementById("close__menu");
+const menu__movil = document.getElementById("menu__movil");
 // const home = document.getElementById("home");
-// const quien__soy = document.getElementById("quien__soy");
-// const proyecto = document.getElementById("proyecto");
-// const contacto = document.getElementById("contacto");
+const quien__soy = document.getElementById("quien__soy");
+const proyecto = document.getElementById("proyecto");
+const contacto = document.getElementById("contacto");
 
+open__menu.addEventListener("click", function(e) {
+    e.preventDefault();
+    open__menu.classList.add("active");
+    menu__movil.classList.remove('d-none');
+});
 
-// open__menu.addEventListener("click", function() {
-//     open__menu.classList.add("active");
-//     menu__movil.style.display = 'block';
-// });
+close__menu.addEventListener("click", function(e) {
+    e.preventDefault();
+    open__menu.classList.remove("active");
+    menu__movil.classList.add('d-none');
+});
 
-// close__menu.addEventListener("click", function() {
-//     open__menu.classList.remove("active");
-//     menu__movil.style.display = 'none';
-// });
+quien__soy.addEventListener("click", function() {
+    open__menu.classList.remove("active");
+    menu__movil.classList.add('d-none');
+})
 
-// quien__soy.addEventListener("click", function() {
-//     open__menu.classList.remove("active");
-//     menu__movil.style.display = 'none';
-// })
+proyecto.addEventListener("click", function() {
+    open__menu.classList.remove("active");
+    menu__movil.classList.add('d-none');
+})
 
-// proyecto.addEventListener("click", function() {
-//     open__menu.classList.remove("active");
-//     menu__movil.style.display = 'none';
-// })
+contacto.addEventListener("click", function() {
+    open__menu.classList.remove("active");
+    menu__movil.classList.add('d-none');
+});
 
-// contacto.addEventListener("click", function() {
-//     open__menu.classList.remove("active");
-//     menu__movil.style.display = 'none';
-// });
+const cambiar__idioma = document.getElementById("cambiar__idioma");
 
-// const cambiar__idioma = document.getElementById("cambiar__idioma");
+cambiar__idioma.addEventListener("click", (e) => {
+    e.preventDefault();
+    const flag__lang = document.getElementById("flag__lang");
+    var data__flag = flag__lang.dataset.flag;
+    flag__lang.src = "public/img/flags/arg.png";
+    flag__lang.alt = "Cambiar a español";
+    flag__lang.title = "Cambiar a español";
+    flag__lang.dataset.flag = 'arg';
 
-// cambiar__idioma.addEventListener("click", () => {
-//     const flag__lang = document.getElementById("flag__lang");
-//     var data__flag = flag__lang.dataset.flag;
-//     flag__lang.src = "public/img/flags/arg.png";
-//     flag__lang.alt = "Cambiar a español";
-//     flag__lang.title = "Cambiar a español";
-//     flag__lang.dataset.flag = 'arg';
+    if (data__flag == "arg") {
+        flag__lang.src = "public/img/flags/usa.png";
+        flag__lang.alt = "Cambiar a inglés";
+        flag__lang.title = "Cambiar a inglés";
+        flag__lang.dataset.flag = 'usa';
+    }
+});
 
-//     if (data__flag == "arg") {
-//         flag__lang.src = "public/img/flags/usa.png";
-//         flag__lang.alt = "Cambiar a inglés";
-//         flag__lang.title = "Cambiar a inglés";
-//         flag__lang.dataset.flag = 'usa';
-//     }
-// });
+const cambiar__idioma__movil = document.getElementById("cambiar__idioma__movil");
 
-// const cambiar__idioma__movil = document.getElementById("cambiar__idioma__movil");
+cambiar__idioma__movil.addEventListener("click", (e) => {
+    e.preventDefault();
+    const flag__lang__movil = document.getElementById("flag__lang__movil");
+    var data__flag__movil = flag__lang__movil.dataset.lang;
+    flag__lang__movil.src = "public/img/flags/arg.png";
+    flag__lang__movil.alt = "Cambiar a español";
+    flag__lang__movil.title = "Cambiar a español";
+    flag__lang__movil.dataset.lang = 'arg';
 
-// cambiar__idioma__movil.addEventListener("click", () => {
-//     const flag__lang__movil = document.getElementById("flag__lang__movil");
-//     var data__flag__movil = flag__lang__movil.dataset.lang;
-//     flag__lang__movil.src = "public/img/flags/arg.png";
-//     flag__lang__movil.alt = "Cambiar a español";
-//     flag__lang__movil.title = "Cambiar a español";
-//     flag__lang__movil.dataset.lang = 'arg';
-
-//     if (data__flag__movil == "arg") {
-//         flag__lang__movil.src = "public/img/flags/usa.png";
-//         flag__lang__movil.alt = "Cambiar a inglés";
-//         flag__lang__movil.title = "Cambiar a inglés";
-//         flag__lang__movil.dataset.lang = 'usa';
-//     }
-// });
+    if (data__flag__movil == "arg") {
+        flag__lang__movil.src = "public/img/flags/usa.png";
+        flag__lang__movil.alt = "Cambiar a inglés";
+        flag__lang__movil.title = "Cambiar a inglés";
+        flag__lang__movil.dataset.lang = 'usa';
+    }
+});
 
 // $(document).ready(function() { irArriba(); });
 

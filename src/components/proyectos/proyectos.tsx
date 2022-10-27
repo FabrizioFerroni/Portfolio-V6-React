@@ -3,6 +3,9 @@ import Twinder from "./img/twinder2.png";
 import Livents from "./img/livents2.png";
 import Moove from "./img/moove2.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+
+SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 function Proyectos() {
   return (
@@ -19,11 +22,12 @@ function Proyectos() {
       <div className="proyectos__cards">
         <Swiper
           // install Swiper modules
-            // modules={[Navigation, Pagination, Scrollbar, A11y]}
+          // modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
+          direction={'horizontal'}
           autoplay={{
-            delay: 1500,
+            delay: 10500,
             disableOnInteraction: false,
           }}
           className="swiper"
@@ -44,23 +48,28 @@ function Proyectos() {
             1280: {
               slidesPerView: 2,
               spaceBetween: 0,
+              navigation: true
             },
             1366: {
               slidesPerView: 3,
               spaceBetween: 10,
+              navigation: true
             },
             1920: {
               slidesPerView: 3,
               spaceBetween: 10,
+              navigation: true
+
             },
           }}
           loop={true}
           grabCursor={true}
           navigation={false}
-          pagination={{ dynamicBullets: true, clickable: true }}
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          pagination={{ 
+            dynamicBullets: true,
+            clickable: true
+           }}
+          scrollbar={false}
         >
           <SwiperSlide className="swiper-slide">
             <div className="cards">
