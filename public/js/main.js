@@ -13,7 +13,7 @@ inputs.forEach((input) => {
     input.onblur = () => {
         //si no hay texto, le quitamos la clase reubicar,
         //para que se superponga con el input
-        if (input.value.trim().length == 0) {
+        if (input.value.trim().length === 0) {
             input.previousElementSibling.classList.remove("reubicar");
             input.classList.add("input__pl");
         } else {
@@ -35,7 +35,7 @@ textarea.forEach((textarea) => {
     textarea.onblur = () => {
         //si no hay texto, le quitamos la clase reubicar,
         //para que se superponga con el textarea
-        if (textarea.value.trim().length == 0) {
+        if (textarea.value.trim().length === 0) {
             textarea.previousElementSibling.classList.remove("reubicar");
             textarea.previousElementSibling.classList.add("textarea");
             textarea.classList.add("textarea__pl");
@@ -57,7 +57,7 @@ select.forEach((select) => {
     select.onblur = () => {
         //si no hay texto, le quitamos la clase reubicar,
         //para que se superponga con el select
-        if (select.value.trim().length == 0) {
+        if (select.value.trim().length === 0) {
             select.previousElementSibling.classList.remove("reubicar");
             select.classList.add("select-pd");
         } else {
@@ -176,45 +176,14 @@ select.forEach((select) => {
 //     return event.charCode >= 48 && event.charCode <= 57;
 // }
 
-// // Menú active desktop
-// const btns =
-//     $("#header .nav__navbar .nav__links");
 
-// for (let i = 0; i < btns.length; i++) {
-//     btns[i].addEventListener("click",
-//         function() {
-//             const current = document
-//                 .getElementsByClassName("active");
-
-//             current[0].className = current[0]
-//                 .className.replace(" active", "");
-
-//             this.className += " active";
-//         });
-// }
-
-// /* Code for changing active
-// link on Scrolling */
-// $(window).scroll(function() {
-//     const distance = $(window).scrollTop();
-//     $('.page-section').each(function(i) {
-
-//         if ($(this).position().top <=
-//             distance + 250) {
-
-//             $('.nav__navbar a.active')
-//                 .removeClass('active');
-
-//             $('.nav__navbar a').eq(i)
-//                 .addClass('active');
-//         }
-//     });
-// }).scroll();
 
 // // Movil
 const open__menu = document.getElementById("open__menu");
 const close__menu = document.getElementById("close__menu");
 const menu__movil = document.getElementById("menu__movil");
+const nav__movil = document.getElementById("nav__movil");
+const container = document.getElementById("container");
 // const home = document.getElementById("home");
 const quien__soy = document.getElementById("quien__soy");
 const proyecto = document.getElementById("proyecto");
@@ -223,6 +192,8 @@ const contacto = document.getElementById("contacto");
 open__menu.addEventListener("click", function(e) {
     e.preventDefault();
     open__menu.classList.add("active");
+    nav__movil.classList.add("opacity-25");
+    container.classList.add("opacity-25");
     menu__movil.classList.remove('d-none');
 });
 
@@ -230,60 +201,60 @@ close__menu.addEventListener("click", function(e) {
     e.preventDefault();
     open__menu.classList.remove("active");
     menu__movil.classList.add('d-none');
+    nav__movil.classList.remove("opacity-25");
+    container.classList.remove("opacity-25");
 });
 
 quien__soy.addEventListener("click", function() {
     open__menu.classList.remove("active");
     menu__movil.classList.add('d-none');
+    nav__movil.classList.remove("opacity-25");
+    container.classList.remove("opacity-25");
 })
 
 proyecto.addEventListener("click", function() {
     open__menu.classList.remove("active");
     menu__movil.classList.add('d-none');
+    nav__movil.classList.remove("opacity-25");
+    container.classList.remove("opacity-25");
 })
 
 contacto.addEventListener("click", function() {
     open__menu.classList.remove("active");
     menu__movil.classList.add('d-none');
+    nav__movil.classList.remove("opacity-25");
+    container.classList.remove("opacity-25");
 });
 
 const cambiar__idioma = document.getElementById("cambiar__idioma");
+const cambiar__idioma__arg = document.getElementById("cambiar__idioma_arg");
 
 cambiar__idioma.addEventListener("click", (e) => {
     e.preventDefault();
-    const flag__lang = document.getElementById("flag__lang");
-    var data__flag = flag__lang.dataset.flag;
-    flag__lang.src = "public/img/flags/arg.png";
-    flag__lang.alt = "Cambiar a español";
-    flag__lang.title = "Cambiar a español";
-    flag__lang.dataset.flag = 'arg';
-
-    if (data__flag == "arg") {
-        flag__lang.src = "public/img/flags/usa.png";
-        flag__lang.alt = "Cambiar a inglés";
-        flag__lang.title = "Cambiar a inglés";
-        flag__lang.dataset.flag = 'usa';
-    }
+    cambiar__idioma.classList.add('d-none');
+    cambiar__idioma__arg.classList.remove('d-none');
 });
 
+cambiar__idioma__arg.addEventListener("click", (e) => {
+    e.preventDefault();
+    cambiar__idioma.classList.remove('d-none');
+    cambiar__idioma__arg.classList.add('d-none');
+})
+
 const cambiar__idioma__movil = document.getElementById("cambiar__idioma__movil");
+const cambiar__idioma__movil__arg = document.getElementById("cambiar__idioma__movil__arg");
 
 cambiar__idioma__movil.addEventListener("click", (e) => {
     e.preventDefault();
-    const flag__lang__movil = document.getElementById("flag__lang__movil");
-    var data__flag__movil = flag__lang__movil.dataset.lang;
-    flag__lang__movil.src = "public/img/flags/arg.png";
-    flag__lang__movil.alt = "Cambiar a español";
-    flag__lang__movil.title = "Cambiar a español";
-    flag__lang__movil.dataset.lang = 'arg';
-
-    if (data__flag__movil == "arg") {
-        flag__lang__movil.src = "public/img/flags/usa.png";
-        flag__lang__movil.alt = "Cambiar a inglés";
-        flag__lang__movil.title = "Cambiar a inglés";
-        flag__lang__movil.dataset.lang = 'usa';
-    }
+    cambiar__idioma__movil.classList.add('d-none');
+    cambiar__idioma__movil__arg.classList.remove('d-none');
 });
+
+cambiar__idioma__movil__arg.addEventListener("click", (e) => {
+    e.preventDefault();
+    cambiar__idioma__movil.classList.remove('d-none');
+    cambiar__idioma__movil__arg.classList.add('d-none');
+})
 
 // $(document).ready(function() { irArriba(); });
 

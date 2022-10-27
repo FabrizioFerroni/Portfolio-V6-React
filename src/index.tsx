@@ -23,7 +23,7 @@ root.render(
     <header id="header" className="movil">
       <NavMovil />
     </header>
-    <div className="container">
+    <div id="container" className="container">
       <a
         className="ir-arriba"
         id="irarriba"

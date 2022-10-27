@@ -38,6 +38,10 @@ html {
     padding-bottom: 1rem !important;
 }
 
+.d-none {
+    display: none !important;
+}
+
 .swiper-slide {
     display: -webkit-box;
     display: -ms-flexbox;

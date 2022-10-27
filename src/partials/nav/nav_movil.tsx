@@ -1,11 +1,11 @@
 import React from "react";
 import usa from './img/usa.png';
-
+import arg from './img/arg.png';
 
 function menuMovil() {
   return (
     <>
-      <nav>
+      <nav id="nav__movil">
         <div className="nav__title">
           <a href="/">
             <h3>Fabrizio Developer</h3>
@@ -13,15 +13,26 @@ function menuMovil() {
         </div>
 
         <div className="nav__menu__icons">
-          <a className="" href="#" id="open__menu">
+          <a className="" href="/#" id="open__menu">
             <i className="uil uil-apps"></i>
           </a>
-          <a href="#" id="cambiar__idioma__movil">
+          <a href="/#" id="cambiar__idioma__movil">
             <img
               id="flag__lang__movil"
               data-lang="usa"
-              title="Cambiar a inglés"
+              title="Cambiar a español"
               src={usa}
+              alt="Cambiar a español"
+            />
+          </a>
+
+          <a href="esp" className="d-none" id="cambiar__idioma__movil__arg">
+            <img
+              id="flag__lang__movil"
+              data-lang="arg"
+              
+              title="Cambiar a inglés"
+              src={arg}
               alt="Cambiar a ingles"
             />
           </a>
