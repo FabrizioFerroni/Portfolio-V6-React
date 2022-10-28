@@ -245,7 +245,7 @@ li {
 }
 
 nav {
-    background-color: var(--dark-color);
+    /* background-color: var(--dark-color);
     display: flex;
     padding: 1.1875rem 0.9375rem;
     align-items: center;
@@ -256,7 +256,61 @@ nav {
     z-index: 1000;
     align-content: center;
     flex-wrap: wrap;
+    flex-direction: row; */
+    background-color: var(--dark-color);
+    display: flex;
+    padding: 1rem 0rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    align-content: center;
+    flex-wrap: wrap;
     flex-direction: row;
+    /* bottom: 0; */
+    border-radius: 0rem 0rem 2rem 2rem;
+    /* border-radius: 2rem 2rem 0rem 0rem; */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    /* padding-right: 1rem; */
+    margin: 0rem 0.5rem;
+    ;
+}
+
+nav ul li:last-child {
+    padding-right: 0rem;
+    ;
+}
+
+nav ul li i {
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    ;
+}
+
+#header_movil .nav__navbar__movil .nav__links__movil.active {
+    color: var(--primary-color);
 }
 
 nav .nav__title h3 {

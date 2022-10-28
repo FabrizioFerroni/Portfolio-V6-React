@@ -20,7 +20,7 @@ root.render(
     <header id="header" className="desktop">
       <NavDesktop />
     </header>
-    <header id="header" className="movil">
+    <header id="header_movil" className="movil">
       <NavMovil />
     </header>
     <div id="container" className="container">

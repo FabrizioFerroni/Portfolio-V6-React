@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 export function activeMenuMovil() {
     const btns =
-        $("#header .nav__navbar .nav__links");
+        $("#header_movil .nav__navbar__movil .nav__links__movil");
 
     for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener("click",
@@ -12,6 +12,7 @@ export function activeMenuMovil() {
 
                 current[0].className = current[0]
                     .className.replace(" active", "");
+                console.log(this.className);
 
                 this.className += " active";
             });
@@ -26,10 +27,10 @@ export function activeMenuMovil() {
             if ($(this).position().top <=
                 distance + 250) {
 
-                $('.nav__navbar a.active')
+                $('.nav__navbar__movil a.active')
                     .removeClass('active');
 
-                $('.nav__navbar a').eq(i)
+                $('.nav__navbar__movil a').eq(i)
                     .addClass('active');
             }
         });
